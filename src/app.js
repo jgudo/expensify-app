@@ -14,7 +14,6 @@ import './styles/style.scss';
 
 
 const store = configureStore();
-
 const jsx = (
     <Provider store={store} >
         <AppRouter />
