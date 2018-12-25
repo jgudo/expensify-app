@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render expense list with expenses 1`] = `
+<div>
+  <ExpenseListItem
+    amount={21424}
+    createdAt={0}
+    description="Gum"
+    id="1"
+    key="1"
+    note=""
+  />
+  <ExpenseListItem
+    amount={135237}
+    createdAt={-345600000}
+    description="Rent"
+    id="2"
+    key="2"
+    note=""
+  />
+  <ExpenseListItem
+    amount={1241}
+    createdAt={345600000}
+    description="Water Bill"
+    id="3"
+    key="3"
+    note=""
+  />
+</div>
+`;
+
+exports[`Should render message if not expense passed 1`] = `
+<div>
+  <p>
+    No Expenses List
+  </p>
+</div>
+`;
