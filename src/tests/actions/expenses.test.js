@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import {startAddExpense, addExpense, editExpense, removeExpense} from '../../actions/expenses';
+import {startAddExpense, startSetExpense, addExpense, editExpense, removeExpense, setExpense} from '../../actions/expenses';
 import expenses from '../fixtures/expenses';
 import database from '../../firebase/firebase';
 
@@ -72,6 +72,26 @@ test('should add expense defaults to database store', (done) => {
     });
 });
 
+test('Should set up expense action object with data', () => {
+    const action = setExpense(expenses);
+    expect(action).toEqual({
+        type: 'SET_EXPENSE',
+        expenses
+    });
+});
+
+test('Should fetch data from database', (done) => {
+    const store = createMockStore({});
+    store.dispatch(startSetExpense()).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'SET_EXPENSE',
+            expenses
+        });
+        done(); 
+        jest.setTimeout(30000);
+    });
+});
 
 // test('Should add default values', () => {
 //     const action = addExpense();
