@@ -11,7 +11,7 @@ export class ExpenseListFilters extends React.Component {
     onDatesChange = ({startDate, endDate}) => {
         this.props.setStartDate(startDate);
         this.props.setEndDate(endDate);
-        console.log('STARTDATE:', startDate, ' END DATE: ', endDate);
+        //console.log('STARTDATE:', startDate, ' END DATE: ', endDate);
     }
 
     onFocusChange = (calendarFocused) => {
