@@ -4,7 +4,7 @@ import {startLogin} from '../actions/auth';
 
 export const LoginPage = ({startLogin}) => (
     <div>
-        <button onClick={startLogin}>Login</button>
+        <button onClick={startLogin}>Login With Google</button>
     </div>
 );
 const mapDispatchToProps = (dispatch) => ({
