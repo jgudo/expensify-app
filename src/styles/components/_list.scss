@@ -39,6 +39,15 @@
     margin-bottom: 0;
     word-break: break-all;
 }
+
+.list-item__description {
+    padding-right: 0;
+
+    @media(min-width: $desktop) {
+        padding-right: $l-size;
+    }
+}
+
 .list-item__data {
     margin: $s-size 0 0 0;
     @media(min-width: $desktop) {

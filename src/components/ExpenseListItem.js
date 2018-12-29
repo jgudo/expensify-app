@@ -5,7 +5,7 @@ import numeral from 'numeral';
 
 const ExpenseListItem = ({id,description, amount, createdAt}) =>  (
     <Link to={`/edit/${id}`} className="list-item">
-        <div>
+        <div className="list-item__description">
             <h3 className="list-item__title">{description}</h3>
             <span>{moment(createdAt).format('MMMM Do YYYY')}</span>
         </div>

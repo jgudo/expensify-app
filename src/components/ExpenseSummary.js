@@ -15,7 +15,7 @@ const ExpenseSummary = ({expenseCount, expenseTotal}) => {
                         <span> { expenseCount }</span> 
                         { expenseCount <= 1 ? ' expense ' : ' expenses '}
                         totalling 
-                        <span>  {numeral(expenseTotal / 100).format('$0,0.00')}</span>
+                        <span>   ₱{numeral(expenseTotal / 100).format('₱0,0.00')}</span>
                     </h2>
                 )}
                 <div className="page-header__actions">
