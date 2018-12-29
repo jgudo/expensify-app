@@ -50,6 +50,22 @@
     position: relative;
 }
 
+.button--facebook {
+    background: $navy-blue;
+
+    &:hover {
+        background: darken($navy-blue, 10%);
+    }
+}
+
+.button--google {
+    background: $rose-red;
+
+    &:hover {
+        background: darken($rose-red, 10%);
+    }
+}
+
 .button--action {
     span:nth-child(1) {
         margin-right: 15px;
