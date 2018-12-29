@@ -1,10 +1,24 @@
+* {
+    box-sizing: border-box;
+}
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    color: $dark-gray;
+    font-family: 'Cabin', sans-serif;
     font-size: 1.6rem;
+    line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: 'Mukta', sans-serif;
 }
 
 button:hover {
@@ -14,6 +28,17 @@ button:hover {
 button:focus {
     outline: none;
 }   
+
+input, 
+select,
+textarea {
+    font-family: 'Cabin', sans-serif;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Cabin', sans-serif;
+}
+
 
 .is-active {
     font-weight: bold;

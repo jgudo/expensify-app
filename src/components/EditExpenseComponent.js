@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import  ExpenseForm from './ExpenseForm';
 import {startEditExpense, startRemoveExpense} from '../actions/expenses';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export class EditExpenseComponent extends React.Component {
 
@@ -18,22 +19,32 @@ export class EditExpenseComponent extends React.Component {
 
     render() {
         return(
-            <div>
-            <ExpenseForm
-                expense={this.props.expense}
-                onSubmit={this.onSubmit}
-            />
-            <button 
-                onClick={() => {
-                this.props.startRemoveExpense({id: this.props.expense.id});
-                this.props.history.push('/');
-                //props.dispatch(removeExpense({id:props.expense.id}));
-            }}
-            >
-             Remove
-        
-             </button>
-        </div>
+            <div className="page-header">
+                <div className="content-container">
+                    <div className="page-header__action">
+                        <h1 className="page-header__title">Edit Expense</h1>
+                        <button 
+                            className="button button--secondary button--action"
+                            onClick={() => {
+                            this.props.startRemoveExpense({id: this.props.expense.id});
+                            this.props.history.push('/');
+                            //props.dispatch(removeExpense({id:props.expense.id}));
+                        }}
+                        >
+                            <span>Remove</span>
+                            <span><FontAwesomeIcon icon={['fas', 'trash']} /> </span>
+                    
+                        </button>
+                    </div>
+                </div>
+                <div className="content-container">
+                    <ExpenseForm
+                        expense={this.props.expense}
+                        onSubmit={this.onSubmit}
+                    />
+                </div> 
+            </div>
+            
         );
     }
 }

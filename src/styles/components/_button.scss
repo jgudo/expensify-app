@@ -1,0 +1,60 @@
+.button {
+    background: $blue;
+    padding: $m-size $l-size;
+    border: none;
+    margin: $m-size 0;
+    color: $white;
+    text-decoration: none;
+    line-height: 1;
+    max-height: 50px;
+}
+.button:hover {
+    cursor: pointer;
+    background: darken($blue, 10%);
+}
+
+.button--stretched {
+    width: 100%;
+}
+.button--social{
+    display: flex;
+    justify-content: space-between;
+}
+.button--transparent-l {
+    background: none;
+    color: $white;
+}
+.button--transparent-d {
+    background: none;
+    color: $dark-gray;
+}
+
+
+.button--transparent-l:hover,
+.button--transparent-d:hover {
+    background: none;
+}
+
+.button--secondary {
+    background: none;
+    border: 1px solid $border;
+    color: $dark-gray;
+
+    &:hover {
+        background: $border;
+    }
+}
+
+.button--social span {
+    justify-self: flex-end;
+    position: relative;
+}
+
+.button--action {
+    span:nth-child(1) {
+        margin-right: 15px;
+    }
+    span:nth-child(2) {
+        font-size: 12px;
+    }
+}

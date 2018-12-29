@@ -1,0 +1,21 @@
+.header {
+    background: $dark-blue;
+    position: relative;
+    z-index: 10;
+
+    @media(max-width: $desktop) {
+        width: 100%;
+        position:fixed;
+    }
+}
+
+.header__title {
+    color: $white;
+    text-decoration: none;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

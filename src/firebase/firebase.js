@@ -16,6 +16,8 @@ const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 
 
 export {firebase, facebookAuthProvider ,googleAuthProvider, database as default};
+
+
 //child_remove event
 // database.ref('expenses').on('child_removed', (snapshot) => {
 //     console.log('item deleted: ',snapshot.key, snapshot.val());

@@ -1,0 +1,20 @@
+.page-header {
+    background: $light-gray;
+    padding: $l-size 0;
+    margin-bottom: $l-size;
+
+    @media(max-width: $desktop) {
+        padding-top: 10rem;
+    }
+}
+
+.page-header__title {
+    font-weight: 300;
+}
+
+.page-header__action {
+    display: flex;
+    justify-content: space-between;
+}   
+
+.page-header__title span { font-weight: 600;}

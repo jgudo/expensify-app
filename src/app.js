@@ -9,6 +9,22 @@ import 'react-dates/lib/css/_datepicker.css';
 import './styles/style.scss';
 import {firebase} from './firebase/firebase';
 import {login, logout} from './actions/auth';
+import WebFont from 'webfontloader';
+import LoadingPage from './components/LoadingPage';
+
+//Font-awesome icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
+import { faPlus, faSave, faTrash } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faGoogle, faFacebookF, faPlus, faSave, faTrash);
+
+//Webfont loader 
+WebFont.load({
+    google: {
+      families: ['Mukta:400,700', 'Cabin']
+    }
+  });
 
 const store = configureStore();
 
@@ -28,7 +44,7 @@ const renderApp = () => {
     }
 };
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 
 firebase.auth().onAuthStateChanged( (user) => {
