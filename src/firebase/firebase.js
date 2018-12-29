@@ -1,4 +1,5 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase';
+
 
 const config = {
     apiKey:process.env.FIREBASE_API_KEY,
@@ -10,12 +11,16 @@ const config = {
 };
 
 firebase.initializeApp(config);
+
 const database = firebase.database();
+const ref = firebase.database().ref();
+const auth = firebase.auth;
+
+
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 
-
-export {firebase, facebookAuthProvider, googleAuthProvider, database as default};
+export {firebase, ref, auth, facebookAuthProvider, googleAuthProvider, database as default};
 
 
 //child_remove event
