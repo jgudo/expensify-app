@@ -11,6 +11,13 @@ export const startLogin = () => {
     };
 };
 
+export const startLoginWithFacebook = () => {
+    console.log('Fired');
+    return () => {
+        return firebase.auth().signInWithPopup(facebookAuthProvider)
+    };
+};
+
 export const logout = () => ({
     type: 'LOGOUT'
 });
