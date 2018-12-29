@@ -14,11 +14,20 @@
 
 .form__divider {
     display: flex;
+    flex-direction: row;
 
+    @media(max-width: $desktop) {
+        flex-direction: column;
+    }
 
     input {
         width: 100%;
         margin-right: $m-size;
+
+        @media(max-width: $desktop) {
+            margin-bottom: $m-size;
+            width: 100%;
+        }
     }
    
 }
