@@ -14,10 +14,10 @@ import LoadingPage from './components/LoadingPage';
 
 //Font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faGoogle, faFacebookF, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { fab, faGoogle, faFacebookF, faGithub, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import { faPlus, faSave, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faGoogle, faFacebookF, faGithub, faPlus, faSave, faTrash);
+library.add(fab, faGoogle, faFacebookF, faGithub, faTwitter, faPlus, faSave, faTrash);
 
 //Webfont loader 
 WebFont.load({
