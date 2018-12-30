@@ -7,27 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export class EditExpenseComponent extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            modalIsOpen: false
-        };
-    }
-
-    openModal = () => {
-        this.setState( () => ({
-            modalIsOpen: true
-        }));
-    };
-    
-
-    closeModal = () => {
-        this.setState( () => ({
-            modalIsOpen: false
-        }));
-    };
-
     onSubmit = (expense) => {
         this.props.startEditExpense(this.props.expense.id, expense);
         this.props.history.push('/');
@@ -36,7 +15,7 @@ export class EditExpenseComponent extends React.Component {
      onRemove = () => {
         this.props.startRemoveExpense({id: this.props.expense.id});
         this.props.history.push('/');
-        this.closeModal();
+    
     }
 
     render() {
@@ -47,7 +26,7 @@ export class EditExpenseComponent extends React.Component {
                         <h1 className="page-header__title">Edit Expense</h1>
                         <button 
                             className="button button--secondary button--action"
-                            onClick={this.openModal}
+                            onClick={this.onRemove}
                         >
                             <span>Remove</span>
                             <span><FontAwesomeIcon icon={['fas', 'trash']} /> </span>
@@ -61,21 +40,6 @@ export class EditExpenseComponent extends React.Component {
                         onSubmit={this.onSubmit}
                     />
                 </div> 
-                <Modal
-                    isOpen={this.state.modalIsOpen}
-                    onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
-                    closeTimeoutMS={200}
-                    className="modal"
-                    contentLabel="Remove Expense Modal"
-                >
-                    <div>
-                        <h2 className="modal__title">Remove this expense?</h2>
-                        <button onClick={this.onRemove} className="modal__button">Yes</button>
-                        <button onClick={this.closeModal} className="modal__button">No</button>
-                    </div>
-                    
-                </Modal>
             </div>
             
         );
