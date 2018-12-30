@@ -66,6 +66,14 @@
     }
 }
 
+.button--github {
+    background: $dark-gray;
+
+    &:hover {
+        background: #1a1a1a;
+    }
+}
+
 .button--action {
     span:nth-child(1) {
         margin-right: 15px;

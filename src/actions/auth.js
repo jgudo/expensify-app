@@ -1,4 +1,4 @@
-import {firebase, auth, ref, googleAuthProvider, facebookAuthProvider} from '../firebase/firebase';
+import {firebase, auth, ref, googleAuthProvider, facebookAuthProvider, githubAuthProvider} from '../firebase/firebase';
 
 export const login = (uid) => ({
     type: 'LOGIN',
@@ -12,10 +12,19 @@ export const startLogin = () => {
 };
 
 export const startLoginWithFacebook = () => {
-    console.log('Fired');
-    
-     firebase.auth().signInWithPopup(facebookAuthProvider)
-    
+    firebase.auth().signInWithPopup(facebookAuthProvider).then(() => {
+        console.log('Signin succesful');
+    }).catch((err) => {
+        alert(err);
+    });
+};
+
+export const startLoginWithGithub = () => {
+    firebase.auth().signInWithPopup(githubAuthProvider).then(() => {
+        console.log('Signin succesful');
+    }).catch((err) => {
+        alert(err);
+    });
 };
 
 export const logout = () => ({

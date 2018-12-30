@@ -14,10 +14,10 @@ import LoadingPage from './components/LoadingPage';
 
 //Font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
+import { fab, faGoogle, faFacebookF, faGithub} from '@fortawesome/free-brands-svg-icons';
 import { faPlus, faSave, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faGoogle, faFacebookF, faPlus, faSave, faTrash);
+library.add(fab, faGoogle, faFacebookF, faGithub, faPlus, faSave, faTrash);
 
 //Webfont loader 
 WebFont.load({
@@ -45,30 +45,6 @@ const renderApp = () => {
 };
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'));
-
-
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1151487328352151',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.2'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-
 
 firebase.auth().onAuthStateChanged( (user) => {
     if(user) {

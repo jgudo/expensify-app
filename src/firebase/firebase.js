@@ -19,8 +19,9 @@ const auth = firebase.auth;
 
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+const githubAuthProvider = new firebase.auth.GithubAuthProvider();
 
-export {firebase, ref, auth, facebookAuthProvider, googleAuthProvider, database as default};
+export {firebase, ref, auth, facebookAuthProvider, githubAuthProvider, googleAuthProvider, database as default};
 
 
 //child_remove event

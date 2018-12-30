@@ -1,7 +1,7 @@
 .header {
     background: $dark-blue;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 
     @media(max-width: $desktop) {
         width: 100%;

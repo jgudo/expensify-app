@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {startLogin, startLoginWithFacebook} from '../actions/auth';
+import {startLogin, startLoginWithFacebook, startLoginWithGithub} from '../actions/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const LoginPage = ({startLogin}) => (
@@ -16,14 +16,19 @@ export const LoginPage = ({startLogin}) => (
             <button onClick={startLoginWithFacebook} className="button button--stretched button--social button--facebook">
                 <span>Login with Facebook </span>
                 <span><FontAwesomeIcon icon={['fab', 'facebook-f']} /> </span>
-            </button>         
+            </button>
+            <button onClick={startLoginWithGithub} className="button button--stretched button--social button--github">
+                <span>Login with Github </span>
+                <span><FontAwesomeIcon icon={['fab', 'github']} /> </span>
+            </button>           
         </div>
     </div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
     startLogin: () => dispatch(startLogin()),
-    startLoginWithFacebook: () => dispatch(startLoginWithFacebook())
+    startLoginWithFacebook: () => dispatch(startLoginWithFacebook()),
+    startLoginWithGithub: () => dispatch(startLoginWithGithub())
 });
 
 export default connect(undefined, mapDispatchToProps)(LoginPage);
