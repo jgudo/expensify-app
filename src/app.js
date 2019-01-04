@@ -22,7 +22,7 @@ library.add(fab, faGoogle, faFacebookF, faGithub, faTwitter, faPlus, faSave, faT
 //Webfont loader 
 WebFont.load({
     google: {
-      families: ['Mukta:400,700', 'Roboto']
+      families: ['Mukta:400,700', 'Lato']
     }
   });
 

@@ -23,14 +23,16 @@ export const LoginPage = ({startLogin}) => (
                 <span>Login with Facebook </span>
                 <span><FontAwesomeIcon icon={['fab', 'facebook-f']} /> </span>
             </button>
-            <button onClick={startLoginWithGithub} className="button button--stretched button--social">
+            <button onClick={startLoginWithGithub} className="button button--stretched button--social button--twitter">
                 <span>Login with Twitter </span>
                 <span><FontAwesomeIcon icon={['fab', 'twitter']} /> </span>
             </button>
             <button onClick={startLoginWithGithub} className="button button--stretched button--social button--github">
                 <span>Login with Github </span>
                 <span><FontAwesomeIcon icon={['fab', 'github']} /> </span>
-            </button>                
+            </button>
+
+            <p className="copyright">&copy; Copyright 2019 Expensify</p>                
         </div>
     </div>
 );

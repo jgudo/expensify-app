@@ -1,5 +1,5 @@
 .button {
-    background: $blue;
+    background: $l-purple;
     padding: $m-size $l-size;
     border: none;
     margin: $m-size 0 0 0;
@@ -7,10 +7,11 @@
     text-decoration: none;
     line-height: 1;
     max-height: 50px;
+    transition: all .3s ease;
 }
 .button:hover {
     cursor: pointer;
-    background: darken($blue, 10%);
+    background: $d-purple;
 }
 
 .button--stretched {
@@ -55,6 +56,13 @@
 
     &:hover {
         background: darken($navy-blue, 10%);
+    }
+}
+
+.button--twitter {
+    background: $blue;
+    &:hover {
+        background: darken($blue, 10%);
     }
 }
 

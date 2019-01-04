@@ -7,6 +7,10 @@
     @media(max-width: $desktop) {
         width: 100%;
     }
+
+    &:focus {
+        outline: 1px solid $l-purple;
+    }
 }
 
 .select {
@@ -21,5 +25,8 @@
     height: 10rem;
     @media(max-width: $desktop) {
         width: 100%;
+    }
+    &:focus {
+        outline: 1px solid $l-purple;
     }
 }

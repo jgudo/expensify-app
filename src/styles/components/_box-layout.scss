@@ -32,6 +32,11 @@
 
 }
 
+.copyright {
+    position: absolute;
+    bottom: $m-size;
+}
+
 
 
 .hero-title {
@@ -45,6 +50,7 @@
     }
 
     h1 {
+        font-family: 'Mukta', sans-serif;
         font-size: $xl-size;
         color: #fff;
         margin-bottom: 0;
@@ -81,6 +87,9 @@
             width: 100%;
             text-align:center;
         }
+    }
+    h1 {
+        font-family: 'Mukta', sans-serif;
     }
 }
 

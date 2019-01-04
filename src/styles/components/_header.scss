@@ -1,5 +1,5 @@
 .header {
-    background: $dark-blue;
+    background: $l-purple;
     position: relative;
     z-index: 1;
 
@@ -12,10 +12,25 @@
 .header__title {
     color: $white;
     text-decoration: none;
+
+    h1 {
+        font-family: 'Mukta', 'Lato', sans-serif;
+    }
 }
 
 .header__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -80px;
+    top: 0; 
+    bottom: 0 ;
+    margin: auto;
 }

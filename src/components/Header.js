@@ -7,9 +7,12 @@ export const Header = ({startLogout}) => (
     <header className="header">
         <div className="content-container">
             <div className="header__content">
-                <Link to="/dashboard" className="header__title">
-                    <h1>Expensify</h1>
-                </Link>
+                <div className="logo">
+                    <img src="/images/favicon.png" />
+                    <Link to="/dashboard" className="header__title">
+                        <h1>Expensify</h1>
+                    </Link>
+                </div>
                 <button 
                     onClick={startLogout} 
                     className="button button--transparent-l">

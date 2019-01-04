@@ -23,6 +23,7 @@ const ExpenseSummary = ({expenseCount, expenseTotal, textFilter}) => {
                         Found {expenseCount} {expenseCount <= 1 ? 'result' : 'results'} with keyword: <span>{textFilter}</span>
                     </p>
                 }
+                <br/>
                 <div className="page-header__actions">
                     <Link to="/create" className="button button--action">
                          <span>Add New Expense</span>
