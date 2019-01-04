@@ -1,37 +1,92 @@
 .box-layout {
-    background: url('/images/expense-bg.jpg');
+    //background: url('/images/expense-bg.jpg');
     width: 100vw;
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    //justify-content: center;
+    //align-items: center;
     position: relative;
+    overflow-x: hidden;
 
-    &:after {
-        content: '';
-        position: absolute;
+    @media(max-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.box-layout__hero {
+    width: 60%;
+    height: 100%;
+
+    img {
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,.3);
+        object-fit: cover;
+    }
+
+    @media(max-width: $desktop) {
+        width: 100%;
+    }
+
+}
+
+
+
+.hero-title {
+    position: absolute;
+    top: $m-size;
+    left: $xxl-size;
+    width: 100%;
+
+    @media(max-width: $desktop) {
+        display: none;
+    }
+
+    h1 {
+        font-size: $xl-size;
+        color: #fff;
+        margin-bottom: 0;
+        
+    }
+    p {
+        margin-top: 0;
+        color: #fff;
     }
 }
 
 .box-layout__box {
-    background: fade-out($color: #fff, $amount: .15);
-    text-align: center;
-    width: 30rem;
+    //background: fade-out($color: #fff, $amount: .15);
+    //text-align: center;
+    width: 40%;
+    height: 100%;
     padding: $l-size;
-    border-radius: 5px;
-    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     z-index: 5;
+
+    @media(max-width: $desktop) {
+        width: 35rem;
+        height: auto;
+        position: absolute;
+        display: block;
+        background: fade-out($color: #fff, $amount: .15);
+        text-align: center;
+
+        button {
+            width: 100%;
+            text-align:center;
+        }
+    }
 }
 
+
 .box-layout__title {
-    margin: 0 0 $m-size 0;
+    margin: 0 0 $l-size 0;
     line-height: 1;
 }
 

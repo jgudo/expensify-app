@@ -7,7 +7,7 @@ html {
 
 body {
     color: $dark-gray;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6;
 }
@@ -32,11 +32,11 @@ button:focus {
 input, 
 select,
 textarea {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 ::-webkit-input-placeholder {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 

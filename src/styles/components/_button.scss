@@ -2,7 +2,7 @@
     background: $blue;
     padding: $m-size $l-size;
     border: none;
-    margin: $m-size 0;
+    margin: $m-size 0 0 0;
     color: $white;
     text-decoration: none;
     line-height: 1;
@@ -14,7 +14,7 @@
 }
 
 .button--stretched {
-    width: 100%;
+    width: 50%;
 }
 .button--social{
     display: flex;

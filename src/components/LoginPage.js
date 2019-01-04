@@ -5,9 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const LoginPage = ({startLogin}) => (
     <div className="box-layout">
+        <div className="box-layout__hero">
+            <div className="hero-title">
+                <h1>Expensify</h1>
+                <p>Get your expenses under control</p>
+            </div>
+            <img src="/images/expensify-illustration.svg" />
+        </div>
         <div className="box-layout__box">
-            <h1 className="box-layout__title">Expensify</h1>
-            <p>Make your expenses under control</p>
+            <h1 className="box-layout__title">Login to Expensify</h1>
             <button onClick={startLogin} className="button button--stretched button--social button--google">
                 <span>Login with Google</span> 
                 <span><FontAwesomeIcon icon={['fab', 'google']} /></span>
