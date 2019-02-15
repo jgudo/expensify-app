@@ -2,6 +2,7 @@ const path = require('path');
 const DotEnv = require('dotenv');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const workboxPlugin = require('workbox-webpack-plugin');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -19,7 +20,7 @@ module.exports = (env) => {
         //entry: './src/app.js',
         entry: ['@babel/polyfill','./src/app.js'],
         output: {
-            path: path.join(__dirname, 'public', 'dist'),
+            path: path.join(__dirname, 'public'),
             filename: 'app.bundle.js'
         },
         module: {
@@ -49,6 +50,13 @@ module.exports = (env) => {
         },
         plugins: [
             CSSExtract,
+            new workboxPlugin.GenerateSW({
+                cacheId: 'expensify-app',
+                swDest: 'sw.js',
+                navigateFallback: '/index.html',
+                clientsClaim: true,
+                skipWaiting: true
+            }),
             new webpack.DefinePlugin({
                 'process.env.FIREBASE_API_KEY':JSON.stringify(process.env.FIREBASE_API_KEY),
                 'process.env.FIREBASE_AUTH_DOMAIN':JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
@@ -63,7 +71,7 @@ module.exports = (env) => {
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
-            publicPath: '/dist/'
+            publicPath: '/'
         } 
     }
 }
