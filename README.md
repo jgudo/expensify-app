@@ -1,3 +1,3 @@
 # Live Demo 
 
-visit live demo at <https://crud-expense-app.herokuapp.com/>
+visit live demo at <https://expensify-crud.netlify.com/>
